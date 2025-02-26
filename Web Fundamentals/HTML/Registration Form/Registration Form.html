@@ -1,0 +1,89 @@
+<!--Todo:waseem -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="icon" href="images/ninja.jpg" type="ninja/jpg">
+</head>
+
+<body>
+    <h1> Registration Form </h1>
+    <form action="/process" method="post">
+
+        <div>
+            <label>First Name:* </label>
+            <input type="text" name="name" placeholder="First Name...">
+        </div>
+        <br>
+        <div>
+            <label>Last Name:* </label>
+            <input type="text" name="name" placeholder="Last Name...">
+        </div>
+        <br>
+        <div>
+            <label>Email:* </label>
+            <input type="text" name="email" placeholder="Your email...">
+        </div>
+        <br>
+        <div>
+            <label>Password:* </label>
+            <input type="password" name="password">
+        </div>
+        <br>
+        <div>
+            <label>Confirm Password:* </label>
+            <input type="password" name="confirm_password">
+        </div>
+        <br>
+        <div>
+            <label>Birthday:</label>
+            <input type="date" name="date">
+        </div>
+
+        <div>
+            <p>Gender Identity</p>
+            <input type="radio" name="font" value="Male" id="male">
+            <label for="male">Male</label>
+
+            <input type="radio" name="font" value="Female" id="Female">
+            <label for="Female">Female</label>
+
+            <input type="radio" name="font" value="Non-binary" id="Non-binary">
+            <label for="Non-binary"><strong>Non-binary </strong></label>
+
+
+            <input type="radio" name="font" value="prefer not to answer" id="prefer-not-to-answer">
+            <label for="prefer-not-to-answer"><strong>I prefer not to answer</strong></label>
+        </div>
+
+        <div>
+            <p> A short description about myself:</p>
+            <textarea name="comment" cols="30" rows="3"></textarea>
+        </div>
+        <br>
+        <div>
+            <label>Favorite Language:</label>
+            <select name="Language">
+                <option>JavaScript</option>
+                <option>C</option>
+                <option>C++</option>
+                <option>html </option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <input type="checkbox" name="offers" id="offers" checked>
+            <label for="offers">Yes, I would like to receive periodic email updates </label>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Create Account">
+        </div>
+
+        <p> * Indicates a required field </p>
+    </form>
+</body>
+
+</html>
