@@ -1,0 +1,42 @@
+
+.all{
+    background-color:#ececda ;
+     
+} 
+.cont{
+    font-size: 100px;
+    text-align: center;
+    color: #474855;
+}
+
+.octocat {
+    height: 700px;
+    margin: 55px;
+}
+
+.r1{
+    display: flex;
+    background-color: #60cccc;
+    margin-bottom: 70px;
+    justify-content: space-evenly;
+}
+
+.r2{
+    background-color: #c49faa;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.r3{
+    background-color:#fcfcd6 ;   
+    display: flex;
+    justify-content: space-evenly;
+}
+.pa{
+    font-size: 80px;
+    color: #474855;
+    text-align: center;
+    padding: 2%;
+    margin-top: 2px;
+}
