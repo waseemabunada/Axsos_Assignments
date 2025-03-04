@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;}
+
+.content{
+    height: 400px;
+    width: 800px;
+    border: 2px solid grey;
+    position: relative;
+    margin: 0 auto;
+}
+.divcontent-top{
+    background-color: #17a2b8;
+    height: 120px;
+    width: 800px;
+}
+.divcontent-bottom{
+    height: 280px;
+    width: 800 px;
+    background-color: white;
+}
+#userimg1{
+    border: 5px solid beige;
+    box-shadow: 0 4px 8px black;
+    height: 110px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 70px;
+    left: 30px;
+}
+.name{
+        font-family: sans-serif;
+  position: absolute;  
+  top: 200px;
+  left: 25px;
+}
+#map{
+    height: 25px;
+    width: 15px;
+    position: absolute;
+    bottom: 120px;
+    left: 30px; 
+}
+.location{
+    font-family:Arial, Helvetica, sans-serif;
+    position: absolute;
+    bottom: 120px;
+    left: 60px; 
+}
+.paragraph{
+    position: absolute;
+    bottom: 70px;
+    left: 30px;
+}
+#gear{
+    height: 25px;
+    width: 20px;
+    position: absolute;
+    bottom: 25px;
+    left: 30px; 
+}
+.link{
+    position: absolute;
+    bottom: 25px;
+    left: 60px; 
+    color: #4d9ff7;
+}

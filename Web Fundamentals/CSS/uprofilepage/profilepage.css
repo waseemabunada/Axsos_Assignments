@@ -1,0 +1,352 @@
+*{
+    margin: 10;
+    padding: 10;
+    border: 0;
+}
+
+
+nav{
+    background-color: black;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+nav h1{
+    color: aliceblue;
+    font-size: 30px;
+}
+nav ul{
+    color:white;
+}
+nav ul li {
+   margin: 10px;
+   padding: 10px;
+   color: #cbcbcb;
+   display:inline;
+   
+} 
+#myprofile{
+    color: white;
+}
+nav button{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    background-color:rgb(23 162 184);
+    padding: 20px;
+    width: 120px;
+    height: 30px; 
+    
+}
+nav button span{
+    position: absolute;
+    top: 30px;
+    right:170px;
+}
+/* تجربة هاي  */
+nav button:hover {
+    background-color: rgb(120, 199, 213);
+} 
+ section{
+    position: absolute;
+    top:65px;
+    left: 30px;
+} 
+.s1{
+    border: 5px solid rgb(23, 162, 184);
+    background-color:rgb(23, 162, 184) ;
+    width: 400px;
+    height:100px;
+}
+.s2{
+    border: 5px solid rgb(96, 98, 98);
+    width: 400px;
+    height:300px;
+}
+.img1{
+    width:100px ;
+    position: absolute;
+    border-radius: 50%;
+    top:120px;
+    left: 60px;
+}
+.name{
+    position: absolute;
+    top:110px;
+    left:30px;
+    color: #333333;
+    font-size: 28px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.seattle{
+    position: absolute;
+    width: 15px;
+    height:20px;
+    bottom:91px;
+    left:40px;
+}
+.seattlep{
+    font-size:25px;
+    position: absolute;
+    bottom:63px;
+    left:65px;
+}
+.descri{
+    position: absolute;
+    bottom:30px;
+    left:45px;
+}
+.descri span{
+    text-decoration: line-through;
+}
+.edit{
+    position: absolute;
+    bottom:10px;
+    left:70px;
+}
+.gear{
+    position: absolute;
+    width: 20px;
+    height:20px;
+    bottom:10px;
+    left:40px;
+}
+ .Education{
+    position: relative;
+    
+} 
+
+ .enwan{
+    border: 5px solid gray;
+    background-color:#333333 ;
+    width: 400px;
+    height:50px;
+    position: absolute;
+    top: 300px;
+    color: white;
+    text-align:start;
+    font-size: 20px; 
+ }
+ .enwan h1{
+    margin: 10px 20px 12px ;
+ }
+.wsef{
+    border: 5px solid gray;
+    background-color:rgb(246, 246, 246) ;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 350px;
+}
+.wsef p
+{
+    margin:20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+.wsef p span {
+    color:rgb(102 102 102);
+}
+
+.con{
+    position: relative;
+    top:-25px;
+    display: flex;
+
+}
+.Connections{
+    border: 5px solid gray;
+    background-color:white ;
+    width: 300px;
+    height:200px;
+    position: absolute;
+    left: 450px;   
+    
+}
+.wsefConnections{
+    border:5px solid gray;
+    background-color:#333333  ;
+    width: 300px;
+    height: 45px;
+    position: absolute;
+    left: 450px;
+} 
+#requests{
+    position: absolute;
+    font-size: 25px;
+    bottom:-25px;
+    left: 50px;
+    color: white;
+  
+}
+#requests span{
+    background-color: gray; 
+    color: white; 
+    font-size: 20px;
+    font-weight: bold;
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px; 
+    left:-40px;
+}
+.todd {
+    position: absolute;
+    width:60px ;
+    height:60px ;
+    bottom:80px;
+    left: 10px;
+    border-radius:50%;
+}
+.phil {
+    position: absolute;
+    width:60px ;
+    height:60px ;
+    bottom:10px;
+    left: 10px;
+    border-radius:50%;
+}
+.nametodd {
+    position: absolute;
+   left:90px;
+   top:40px;
+   font-size: 30px;
+}
+.namephil{
+    position: absolute;
+   left:90px;
+   top:110px;
+   font-size: 30px;
+}
+.accl{
+    width: 35px;
+    position: absolute;
+    top: 70px;
+    left: 250px;
+    
+}
+.accll{
+    width: 35px;
+    position: absolute;
+    top: 70px;
+    left: 210px;
+}
+.acclll{
+    width: 35px;
+    position: absolute;
+    top: 140px;
+    left: 250px;
+}
+.accllll{
+    width: 35px;
+    position: absolute;
+    top: 140px;
+    left: 210px;
+}
+
+.your{
+    position: relative;
+
+}
+.yourconne{
+    border: 5px solid gray;
+    background-color:#333333  ;
+    width: 300px;
+    height: 45px;
+    position: absolute;
+    left: 450px;
+   top: 200px;
+}
+.yourconne span {
+    background-color: gray; 
+    color: white; 
+    font-size: 20px;
+    font-weight: bold;
+    width: 60px; 
+    height: 30px; 
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -2px; 
+    left:-70px;
+    
+}
+.yourconnections{
+
+    border: 5px solid gray;
+    width: 300px;
+    height: 280px;
+    position: absolute;
+    left: 450px;
+    top: 247px;
+}
+.yourconnectionss{
+    border: 5px solid gray;
+    width: 300px;
+    height: 50px;
+    position: absolute;
+    left: 450px;
+    top: 528px;
+   
+}
+.yourconne h1{
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    bottom:-15px;
+    left: 80px;
+}
+.yourconnections img{
+    width: 60px;
+    display: flex;
+    border-radius:50%;
+    margin: 8px 10px;
+}
+.yourconnections .Adrien {
+    position: absolute;
+    top:2px;
+    left: 90px;
+    font-size: 25px;
+}
+.Anne{
+    position: absolute;
+    top:65px;
+    left: 90px;
+    font-size: 25px;
+}
+.Alayne{
+    position: absolute;
+    top:135px;
+    left: 90px;
+    font-size: 25px;
+}
+.Arry{
+    position: absolute;
+    top:200px;
+    left: 90px;
+    font-size: 25px;
+}
+.yourconnectionss a{
+    position: absolute;
+    left: 15px;
+    bottom: 16px;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
