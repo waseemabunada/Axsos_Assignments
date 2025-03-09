@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Feed</title>
+    <link rel="stylesheet" href="like.css">
+</head>
+
+<body>
+    <nav>
+        <p>Network</p>
+    </nav>
+
+    <h1>Your Feed</h1>
+
+    <main>
+
+        <section class="prof-kper">
+            <section class="prof">
+                <img src="user-circle.png" alt="Profile Picture">
+                <p><a href="">add an avatar</a></p>
+                <p>James Doe</p>
+            </section>
+        </section>
+
+
+        <section class="namesall">
+            <section class="post">
+                <div class="post-header">
+                    <h2>Neil M</h2>
+                    <p><span id="ons">9</span>like(s)</p>
+                    <button class="like-button" onclick="likes(this)" >Like</button>
+                </div>
+                <p>I just set up this new discord bot, let me know what you all think. <a href="">link</a></p>
+            </section>
+
+            <section class="post">
+                <div class="post-header">
+                    <h2>Nichole K</h2>
+                    <p><span id="tos">12</span> like(s)</p>
+                    <button class="like-button" onclick="likes(this)" >Like</button>
+                </div>
+                <p>Just finished my next comic, check it out. <a href="">link</a></p>
+            </section>
+
+            <section class="post">
+                <div class="post-header">
+                    <h2>Jim R</h2>
+                    <p><span id="trs">9</span>like(s)</p>
+                    <button class="like-button" onclick="likes(this)" >Like</button>
+                </div>
+                <p>I can't stop listening to the new album. Who else is liking it? <a href="">link</a></p>
+            </section>
+        </section>
+    </main>
+    <script src="like.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- function likes(el) {
+    // إيجاد العنصر النصي الذي يحتوي عدد الإعجابات
+    let likeText = el.previousElementSibling;
+    
+    // استخراج الرقم الحالي
+    let currentLikes = parseInt(likeText.textContent);
+    
+    // زيادة العدد بمقدار 1
+    currentLikes++;
+    
+    // تحديث النص
+    likeText.textContent = currentLikes + " like(s)";
+} -->

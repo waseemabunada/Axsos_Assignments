@@ -1,0 +1,193 @@
+body {
+    background-color: #1f4b6e;
+}
+
+.tops {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px;
+}
+
+.search-container {
+    background-color: #333;
+    display: flex;
+    padding: 14px 40px;
+    border-radius: 15px;
+}
+
+.search-box {
+    text-align: center;
+    padding: 10px;
+}
+
+.search-button {
+    background-color: #2a71a5;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-left: 3px;
+    padding: 6px;
+}
+
+.Text-Size {
+    margin: -20px 0px -20px 90px;
+    font-size: 20px;
+    color: antiquewhite;
+}
+
+.Text-Size a {
+    color: yellow;
+}
+
+.Text-Size span {
+    color: black;
+}
+
+.logo img {
+    width: 400px;
+    margin: 5px 30px;
+}
+
+nav {
+    background-color: rgb(59 120 172);
+    border-radius: 10px;
+    width: 90%;
+    margin-left: 110px;
+    /* يجعل العنصر في المنتصف أفقياً */
+
+}
+
+nav ul {
+    display: flex;
+    padding: 10px;
+}
+
+nav ul li {
+    color: #cbcbcb;
+    font-size: 25px;
+    list-style-type: none;
+    /* ازالة النقاط  */
+    margin: 0px 65px;
+}
+
+.container-phara {
+    display: flex;
+    text-align: center;
+}
+
+.any {
+    font-size: 20px;
+    color: #cbcbcb;
+    /* text-align: center; */
+    text-decoration: underline;
+    margin-left: 200px;
+    display: inline;
+
+}
+
+.any h1 {
+    margin-bottom: -15px;
+
+}
+
+.anyany {
+    margin: -50px 160px;
+
+}
+
+.shm {
+    text-decoration: none;
+    color: #e8fc05;
+    text-decoration: none; 
+    display: inline-block; /* منع أي تأثير غير مرغوب فيه*/
+}
+
+a {
+    color: antiquewhite;
+}
+
+.par1 {
+    color: white;
+    font-size: 18px;
+    padding-right: 185px;
+    margin-left: 40px;
+    margin-top: 2px;
+}
+
+.par2 {
+    color: rgb(245, 245, 1);
+    font-size: 22px;
+    margin:-20px 100px -20px 0px;
+    /* margin-right: 100px; */
+}
+
+.par3 {
+    color: rgb(242, 242, 242);
+    font-size: 18px;
+    margin-left: -100px;
+    padding-top: 5px;
+}
+
+.half-page {
+    background-color: white;
+    height: auto;
+    display: flex;
+    /* align-items: center; */
+}
+
+.line {
+    width: 220%;
+    border: 1.5px solid blue;
+}
+
+.half-flex {
+    display: flex;
+    flex-direction: column;
+    /* يجعل العناصر تتراص عمودياً */
+    align-items: center;
+    /* توسيط العناصر أفقياً */
+    text-align: center;
+    /* يجعل النصوص في الوسط */
+    width: 150%;
+    /* التحكم في عرض القسم */
+    margin: 10px 220px;
+    /* توسيط القسم نفسه في الصفحة */
+    
+}
+
+.half-flex h1 {
+    margin: -1px;
+}
+
+.half-flex p {
+    margin: 5px;
+}
+.half-flex
+li {
+    margin: 5px;
+    color: #2a71a5;
+}
+
+.half-flex ul {
+    margin: -5px;
+    list-style-type: square; /* استبدال النقاط بالمربعات */
+}
+.half-flex ul li::marker {
+    color: black; /* تغيير لون المربع إلى الأسود (جديدة)*/
+}
+footer ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    font-size: 20px;
+    color: rgb(134 187 231);
+    padding: 0px 200px;
+
+}
+footer h5{
+    text-align: center;
+    color:rgb(134 187 231);
+    
+   
+}
