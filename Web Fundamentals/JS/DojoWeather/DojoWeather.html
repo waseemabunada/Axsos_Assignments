@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="DojoWeather.css">
+</head>
+
+<body>
+    <nav>
+        <h1>DojoWeather</h1>
+        <ul onclick="myFunction()">
+            <li>Burbank</li>
+            <li>Chicogo</li>
+            <li>Dollas</li>
+        </ul>
+    </nav>
+    <section class="all">
+        <header>
+            <h2>San Jose</h2>
+            <label for="tempSelect">Show temperature in</label>
+            <select id="tempSelect" onchange="convertTemperature()">
+                <option value="c"> °c</option>
+                <option value="f"> °F</option>
+            </select>
+        </header>
+
+        <hr>
+
+        <main>
+
+            <section class="cond1">
+                <h1>Today</h1>
+                <img src="imges/some_rain.png" alt="">
+                <h2>some rain</h2>
+                <div class="phara">
+                    <p><span class="high-temp">24°</span></p>
+                    <p class="low-temp"> 18°</p>
+                </div>
+            </section>
+
+            <section class="cond1">
+                <h1>Tomorrow</h1>
+                <img src="imges\some_sun.png" alt="">
+                <h2>some sun</h2>
+                <div class="phara">
+                    <p><span class="high-temp">27°</span></p>
+                    <p class="low-temp"> 19°</p>
+                </div>
+            </section>
+
+            <section class="cond1">
+                <h1>Friday</h1>
+                <img src="imges\some_clouds.png" alt="">
+                <h2>some clouds</h2>
+                <div class="phara">
+                    <p><span class="high-temp">21°</span></p>
+                    <p class="low-temp"> 16°</p>
+                </div>
+            </section>
+
+            <section class="cond1">
+                <h1>Saturday</h1>
+                <img src="imges/some_rain.png" alt="">
+                <h2>some sun</h2>
+                <div class="phara">
+                    <p><span class="high-temp">26°</span></p>
+                    <p class="low-temp"> 21°</p>
+                </div>
+            </section>
+
+        </main>
+
+        <section class="stop" id="cookieSection">
+            <img src="imges\cookie.png" alt="">
+            <div>
+                <h1>Stop! Cookie time</h1>
+                <p>We use cookies (sadly not the edible ones) to personalize content and ads,
+                    to provide social media features and to analyse our traffic.<a href="">Read more ...</a></p>
+            </div>
+            <button onclick="hideSection()">I Accept</button>
+        </section>
+    </section>
+
+    <script src="DojoWeather.js"></script>
+</body>
+
+</html>
