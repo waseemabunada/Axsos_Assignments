@@ -1,32 +1,61 @@
-var currentInput = '0';
-var operator = null;
-var previousInput = null;
+let currentInput = '0';  
+let previousInput = null; 
+let operator = null;      
+
+const display = document.getElementById('display'); 
 
 
-const buttons = document.querySelectorAll('.btn');
-buttons.forEach(button => {
-    button.addEventListener('click', function() {
-        const value = this.getAttribute('data-value');
-        if (value === 'C') {
-            clr(); 
-        } else {
-            press(value);
-        }
-    });
-});
-
-const operators = document.querySelectorAll('.operator');
-operators.forEach(operatorButton => {
-    operatorButton.addEventListener('click', function() {
-        const value = this.getAttribute('data-value');
-        setOP(value);
-    });
-});
+function updateDisplay() {
+    display.textContent = currentInput;
+}
 
 
-document.getElementById('equals').addEventListener('click', calculate);
+function press(value) {
+    if (currentInput === '0' || currentInput === 'error') {
+        currentInput = value; 
+    } else {
+        currentInput += value; 
+    }
+    updateDisplay();
+}
 
-document.querySelector('[data-value="C"]').addEventListener('click', clr);
+
+function setOP(op) {
+    if (previousInput !== null && operator !== null) {
+        calculate(); 
+    }
+    previousInput = currentInput;
+    operator = op;               
+    currentInput = '0';          
+}
+
+function calculate() {
+    if (previousInput === null || operator === null) return; 
+
+    let result = 0;
+    let prev = parseFloat(previousInput);
+    let current = parseFloat(currentInput);
+
+   
+    switch (operator) {
+        case '+': result = prev + current; break;
+        case '-': result = prev - current; break;
+        case '*': result = prev * current; break;
+        case '/': 
+            if (current === 0) {
+                result = 'error';
+            } else {
+                result = prev / current;
+            }
+            break;
+    }
+
+    currentInput = result.toString(); 
+    previousInput = null; 
+    operator = null;
+    updateDisplay();
+}
+
 
 function clr() {
     currentInput = '0';
@@ -35,54 +64,26 @@ function clr() {
     updateDisplay();
 }
 
-function press(value) {
-    if (currentInput === '0' && value !== '.') {
-        currentInput = value;
-    } else {
-        currentInput += value;
-    }
-    updateDisplay();
-}
 
-function setOP(op) {
-    if (previousInput === null) {
-        previousInput = currentInput;
-        currentInput = '0';
-    }
-    operator = op;
-}
+document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', () => {
+        let value = button.getAttribute('data-value');
+        if (value === 'C') {
+            clr();
+        } else {
+            press(value);
+        }
+    });
+});
 
-function calculate() {
-    if (previousInput === null || operator === null) return;
-    let result;
-    const prev = parseFloat(previousInput);
-    const current = parseFloat(currentInput);
+document.querySelectorAll('.operator').forEach(button => {
+    button.addEventListener('click', () => {
+        let op = button.getAttribute('data-value');
+        setOP(op);
+    });
+});
 
-    switch (operator) {
-        case '+':
-            result = prev + current;
-            break;
-        case '-':
-            result = prev - current;
-            break;
-        case '*':
-            result = prev * current;
-            break;
-        case '/':
-            if (current === 0) {
-                result = 'Error';
-            } else {
-                result = prev / current;
-            }
-            break;
-    }
+document.getElementById('equals').addEventListener('click', calculate);
 
-    currentInput = result.toString();
-    operator = null;
-    previousInput = null;
-    updateDisplay();
-}
 
-function updateDisplay() {
-    document.getElementById('display').textContent = currentInput;
-}
+updateDisplay();
