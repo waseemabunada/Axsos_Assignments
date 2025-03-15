@@ -1,4 +1,4 @@
-function myFunction() {
+function myFunction(el) {
     alert("Loading weather report");
   }
 
@@ -19,7 +19,7 @@ function convertTemperature() {
         }
     });
 
-    lowTemps.forEach(temp => {
+    lowTemps.forEach(temp => {    // كل عنصر يتم تمريره في التكرار يتم تسميته temp عبارة عن فور لوب 
         let currentTemp = parseInt(temp.textContent);
         if (unit === "f") {
             temp.textContent = Math.round((currentTemp * 9/5) + 32) + "°";
@@ -28,3 +28,52 @@ function convertTemperature() {
         }
     });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// for (let i = 0; i < highTemps.length; i++) {
+//     let currentTemp = parseInt(highTemps[i].textContent); 
+//     if (unit === "f") {
+//         highTemps[i].textContent = Math.round((currentTemp * 9 / 5) + 32) + "°";
+//     } else {
+//         highTemps[i].textContent = Math.round((currentTemp - 32) * 5 / 9) + "°";
+//     }
+// }
+// for (let i = 0; i < lowTemps.length; i++) {
+//     let currentTemp = parseInt(lowTemps[i].textContent);
+//     if (unit === "f") {
+//         lowTemps[i].textContent = Math.round((currentTemp * 9 / 5) + 32) + "°";
+//     } else {
+//         lowTemps[i].textContent = Math.round((currentTemp - 32) * 5 / 9) + "°";
+//     }
+// }
+// }
+
+
+
+//shatha way
+// function convertTemperature(){
+// if(Selection.value)
+//     if(Selection.value=="c"){
+//         var result =Math.round((el.innerText - 32) *5/9)
+//         el.innerText=Math.trunc(result) }
+//     }
+//     else if(Selection.value=="F"){
+//         var result =Math.round((el.innerText * 9/5) + 32)
+//         el.innerText=Math.trunc(result) }
+//     }
+// }
