@@ -1,0 +1,27 @@
+
+
+use onsite2025;
+
+create table users (
+id int primary key not null auto_increment ,
+firstName varchar(20) not null,
+lastName varchar(20) not null,
+email varchar(40) not null,
+createdAt date,
+updated date
+);
+
+
+insert into users (id, firstName, lastName , email, createdAt,updatedAt )values (1 ,"waseem" , "abunada" ,"waeem@hmail.com " ,"2025-03-17" ,"2025-03-17"  );
+
+
+select * from users;
+ '1', 'waseem', 'abunada', 'waeem@hmail.com ', '2025-03-17', '2025-03-17'
+
+
+update users set email='abd@gmail.com' where id=1
+1	waseem	abunada	abd@gmail.com	2025-03-17	2025-03-17
+
+
+
+delete from users where id=1;
