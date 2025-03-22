@@ -1,0 +1,189 @@
+/* Style sheet theme: Exam2025
+Developer Name: Waseem Abu Nada
+Date Time:50-3-2025 : 10 AM 
+Email:waseemabunada202@gmail.com
+*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    width: 1900px;
+
+}
+
+.face-img {
+    width: 100%;
+    height: auto;
+}
+
+main {
+    position: relative;
+}
+
+header {
+    position: absolute;
+    top: 30px;
+    display: flex;
+
+}
+
+.all-url-li {
+    display: flex;
+    font-size: 25px;
+    list-style-type: none;
+
+    a {
+        color: white;
+        margin: 0px 10px;
+        justify-content: space-evenly;
+    }
+}
+
+
+.logo-img {
+    margin: 0px 1200px 0px 40px;
+
+}
+
+.search-all {
+    position: relative;
+
+    input {
+        width: 400px;
+        padding: 10px;
+        border: 3px solid black;
+        background-color: #f1f1f1;
+        color: black;
+        margin: 10px 10px 10px 10px;
+    }
+
+    input::placeholder {
+        font-weight: bold;
+        opacity: 10;
+        padding: 25px;
+        font-size: 15px;
+    }
+
+    img {
+        width: 30px;
+        height: 20px;
+        margin: 0px 0px 0px 15px;
+        position: absolute;
+        top: 20px;
+    }
+}
+
+#sound-img {
+
+    margin: 0px 0px 0px -50px;
+}
+
+hr {
+    border: 2px solid #ece4e4;
+    position: relative;
+    bottom: 950px;
+
+}
+
+.Inside-the-picture {
+    text-align: center;
+    position: absolute;
+    top: 480px;
+    right: 480px;
+    color: white;
+
+    h1 {
+        font-size: 50px;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    p {
+        font-size: 30px;
+        padding: 20px;
+    }
+
+    button {
+        background-color: hsl(4.03deg 70.62% 58.63%);
+        color: rgb(255, 243, 243);
+        font-size: 30px;
+        padding: 10px;
+        border: 2px solid black;
+        box-shadow: 8px 7px black;
+
+    }
+}
+
+.yoga-section {
+    background-color: hsl(0deg 0% 93.33%);
+    width: 101%
+}
+
+.Our-Yoga-Classes {
+    text-align: center;
+
+    h2 {
+        font-size: 50px;
+        padding: 20px;
+    }
+
+    p {
+        font-size: 30px;
+    }
+
+}
+
+.Yoga-pictures {
+    display: flex;
+    justify-content: center;
+    gap: 180px;
+    margin: 50px 0px 0px 0px;
+    text-align: center;
+    width: 100%;
+    padding: 50px 0px;
+
+    img {
+        border-radius: 50%;
+        padding: 10px 10px;
+        width: 300px;
+
+    }
+
+    h2 {
+        font-size: 40px;
+        padding: 10px;
+    }
+
+    p {
+        font-size: 30px;
+    }
+}
+
+footer {
+    background-color: hsl(18, 78%, 47%);
+    padding: 60px 20px;
+    text-align: center;
+    display: flex;
+    width: 99%;
+
+    p {
+        font-size: 25px;
+        margin: 0px 60px;
+    }
+
+    a {
+        color: hsl(226, 51%, 77%)
+    }
+
+}
+
+.social-media-icons {
+    display: flex;
+    gap: 20px;
+    margin: 0px 0px 0px 870px;
+}
