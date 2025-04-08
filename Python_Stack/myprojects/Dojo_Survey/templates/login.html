@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}     
+    <link rel="stylesheet" href="{% static 'style.css' %}">  
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+    <form action="/result/" method="POST" class="box">
+        {% csrf_token %} 
+        <label for="name">Your Name: <input class="formelement" type="text" id="name" name="name"></label>
+        
+        <label for="location">Dojo Location:
+        <select class="formelement" name="location" id="location">
+            <option value="San Jose">San Jose</option>
+            <option value="Burbank">Burbank</option>
+            <option value="Orange County">Orange County</option>
+            <option value="Ramallah">Ramallah</option>
+        </select></label>
+        <label for="language">Favorite Language:
+        <select class="formelement" name="language" id="language">
+            <option value="Python">Python</option>
+            <option value="Javascript">Javascript</option>
+            <option value="HTML">HTML</option>
+            <option value="Java">Java</option>
+        </select></label>
+        <label id="comment-label" for="comment">Comment(optional):</label>
+        <textarea name="comment" id="comment"></textarea>
+        <input type="submit" value="Submit" class="btn">
+    </form>
+</body>
+</html>

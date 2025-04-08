@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}     
+    <link rel="stylesheet" href="{% static 'style.css' %}">  
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Results page</title>
+</head>
+<body>
+    <div class="box">
+        <h3>Submitted Info</h3> 
+        <label class="info" for="name">Name: <span>{{name}}</span></label>
+        <label class="info" for="location">Dojo Location: <span>{{location}}</span></label>
+        <label class="info" for="language">Favorite Language: <span>{{language}}</span></label>
+        <label class="info" for="comment">Comment: <span>{{comment}}</span></label>
+        <a class="btn" href="/">Go Back</a>
+    </div>
+</body>
+</html>
