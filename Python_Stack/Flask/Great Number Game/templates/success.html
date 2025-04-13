@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <title>Counter</title>
+</head>
+
+<body>
+    <div class="custom-body-3">
+        <h1>Welcome to the Great Number Game!</h1>
+        <h4 class="header4">Congrats! you win :D</h4>
+        <h4 class="header4">Number of tries: {{session['tries']}}</h4>
+        <div class="box mb-2 bg-success text-white">
+            <h4>{{session['number']}} was the number! </h4>
+            <a href="/destroy_session"><button type="button" class="btn btn-light btn-lg mb-3">Play
+                    again!</button></a>
+        </div>
+        {% if 'winners' in session and 'type' in session%}
+        <h4>Do you want to enter your name ?</h4>
+        <div class="d-flex winner_name mb-2 justify-content-between">
+            <form action="/leaderboard" method="post">
+                <input type="text" placeholder="your name" name="winner_name" required>
+                <button type="submit" class="btn btn-primay">Leaderboard</button>
+            </form>
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>

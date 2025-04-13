@@ -6,4 +6,4 @@ def index(request):
 
 def destroy_session(request):
     request.session.flush()  
-    return redirect("/")
+    return redirect("")

@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Gold</title>
+</head>
+<body>
+    <div class="intut_gold">
+        <label for="YourGold">Your Gold :</label><br>
+        <input type="text" placeholder="0"> 
+    </div>
+<section class="continer">
+    <form class="bord">
+        {% csrf_token %}
+        <h2>Farm</h2>
+        <p>(earns 10-20 gold)</p>
+        <button>Find Gold!</button>
+    </form>
+    <form class="bord">
+        {% csrf_token %}
+        <h2>Cave</h2>
+        <p>(earns 10-20 gold)</p>
+        <button>Find Gold!</button>
+    </form>
+    <form class="bord">
+        {% csrf_token %}
+        <h2>House</h2>
+        <p>(earns 10-20 gold)</p>
+        <button>Find Gold!</button>
+    </form>
+    <form class="bord">
+        {% csrf_token %}
+        <h2>Quest</h2>
+        <p>(earns /takes 0-50 gold)</p>
+        <button>Find Gold!</button>
+    </form>
+</section>
+    <div>
+        <p>Activities:</p>
+        <textarea name="paragraph" rows="6" cols="110" placeholder=""></textarea><br><br>
+    </div>
+
+
+    
+</body>
+</html>
