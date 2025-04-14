@@ -1,14 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 
 # Create your views here.
 def index(request):
-    if request.method == 'POST':
-        count = int(request.POST.get('count', 0)) + 1
-    else:
-        count = 0
-
-    return render(request, 'index.html', {'count': count})
+    if "counter" not in request.session:
+        request.session["counter"]=0
+    request.session["counter"]+=1    
+    return render(request, 'index.html', {'count': request.session["counter"]})
 
 def destroy_session(request):
-    del().request 
-    return render(request, 'index.html', {'count': 0}) 
+    request.session.flush()  
+    return redirect("/") 

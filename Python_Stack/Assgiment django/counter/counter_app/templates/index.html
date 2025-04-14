@@ -7,16 +7,15 @@
     {% load static %} 
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 </head>
-<body method="post" >
+<body>
     <p>Counter Value: {{ count }}</p>
     <p>Number of Visits: {{ visits }}</p>
-
     
     <form method="post">
         {% csrf_token %}
         <button type="submit" name="action" value="increment_2">+2</button>
     </form>
-    <form method="post">
+    <form method="post" action="/destroy_session">
         {% csrf_token %}
         <button type="submit" name="action" value="reset">Reset</button>
     </form>

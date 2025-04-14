@@ -10,37 +10,41 @@
 <body>
     <div class="intut_gold">
         <label for="YourGold">Your Gold :</label><br>
-        <input type="text" placeholder="0"> 
+        <input type="text" placeholder="0" value="{{ request.session.total_gold }}"> 
     </div>
 <section class="continer">
-    <form class="bord">
+    <form class="bord" action="/process_money" method="POST">
         {% csrf_token %}
         <h2>Farm</h2>
         <p>(earns 10-20 gold)</p>
-        <button>Find Gold!</button>
+        <button name="Farm">Find Gold!</button>
     </form>
-    <form class="bord">
+    <form class="bord" action="/process_money" method="POST">
         {% csrf_token %}
         <h2>Cave</h2>
         <p>(earns 10-20 gold)</p>
-        <button>Find Gold!</button>
+        <button  name="Cave">Find Gold!</button>
     </form>
-    <form class="bord">
+    <form class="bord" action="/process_money" method="POST">
         {% csrf_token %}
         <h2>House</h2>
         <p>(earns 10-20 gold)</p>
-        <button>Find Gold!</button>
+        <button  name="House">Find Gold!</button>
     </form>
-    <form class="bord">
+    <form class="bord" action="/process_money" method="POST">
         {% csrf_token %}
         <h2>Quest</h2>
         <p>(earns /takes 0-50 gold)</p>
-        <button>Find Gold!</button>
+        <button name="Quest">Find Gold!</button>
     </form>
 </section>
-    <div>
+    <div class="activities">
         <p>Activities:</p>
-        <textarea name="paragraph" rows="6" cols="110" placeholder=""></textarea><br><br>
+        <textarea name="activity" rows="6" cols="110" placeholder="0">
+            {% for activity in request.session.activities %}
+            {{ activity }}
+            {% endfor %}
+        </textarea><br><br>
     </div>
 
 
