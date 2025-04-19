@@ -10,7 +10,7 @@ def index(request):
         request.session['activities'] = []
     return render(request, 'gold.html')
 
-def mony(request):
+def process_money(request):
     if request.method == 'POST':
         earned = 0
         activity = ''
@@ -35,10 +35,9 @@ def mony(request):
                 color = 'red'
         activity += f" ({time})"
         request.session['total_gold'] += earned
-        request.session['activities'].insert(0, (activity, color))
-        request.session.modified = True  
-
+        request.session['activities'].insert(0, {'text': activity,'color': color})
     return redirect('/')
+
 def clear_session(request):
     request.session.clear()  
     return redirect("/")

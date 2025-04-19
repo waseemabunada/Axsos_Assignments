@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Author</title>
+    <!-- إضافة رابط CSS ل Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4">Author Details</h1>
+        <h2>{{ author.first_name }} {{ author.last_name }}</h2>
+        <p><strong>ID:</strong> {{ author.id }}</p>
+        <p><strong>Notes:</strong> {{ author.notes }}</p>
+
+        <h3 class="mt-4">Books:</h3>
+        <ul class="list-group">
+            {% for book in author.books.all %}
+                <li class="list-group-item">{{ book.book_title }}</li>
+            {% endfor %}
+        </ul>
+
+        <h3 class="mt-4">Add Book to Author:</h3>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="book_id" class="form-label">Select Book:</label>
+                <select name="book_id" id="book_id" class="form-select">
+                    <option value="">Select Book</option>
+                    {% for book in books %}
+                        <option value="{{ book.id }}">{{ book.book_title }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Book</button>
+        </form>
+
+        <p class="mt-4"><a href="/add_author" class="btn btn-secondary">Back to Authors</a></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
