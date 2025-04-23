@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Shows</title>
+</head>
+
+<body>
+    <h1>All Shows</h1>
+    <a href="/shows/new">Add a New Show</a>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Network</th>
+            <th>Release Date</th>
+            <th>Actions</th>
+        </tr>
+        {% for film in display_film %}
+        <tr>
+            <td>{{ film.id }}</td>
+            <td>{{ film.title }}</td>
+            <td>{{ film.network }}</td>
+            <td>{{ film.release_date }}</td>
+            <td>
+                <a href="/shows/{{ film.id }}">Show</a> |
+                <a href="/shows/{{ film.id }}/edit">Edit</a> |
+                <form action="/shows/{{ film.id }}/destroy" method="POST" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

@@ -22,7 +22,7 @@
         </ul>
 
         <h3 class="mt-4">Add Author to Book:</h3>
-        <form method="POST">
+        <form action="get_select_author" method="POST">
             {% csrf_token %}
             <div class="mb-3">
                 <label for="author_id" class="form-label">Select Author:</label>

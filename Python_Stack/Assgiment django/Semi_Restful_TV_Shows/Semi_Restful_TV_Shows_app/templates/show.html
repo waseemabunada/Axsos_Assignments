@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{display_film.title}}</title>
+</head>
+<h1>{{ display_film.title }}</h1>
+<p><strong>Network:</strong> {{ display_film.network }}</p>
+<p><strong>Release Date:</strong> {{ display_film.release_date }}</p>
+<p><strong>Description:</strong> {{ display_film.description }}</p>
+
+<a href="/shows/{{ display_film.id }}/edit">Edit</a> |
+<form action="/shows/{{ display_film.id }}/destroy" method="POST" style="display:inline;">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+</form>
+
+<br><a href="/shows">Back to All Shows</a>
+</body>
+</html>

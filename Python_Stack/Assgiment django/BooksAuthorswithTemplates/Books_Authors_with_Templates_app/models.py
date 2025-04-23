@@ -1,5 +1,5 @@
 from django.db import models
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your models here.
 class Book(models.Model):
@@ -34,4 +34,3 @@ def add_author(request):
             last_name=request['last_name'],
             notes=request['notes']
         )   
-

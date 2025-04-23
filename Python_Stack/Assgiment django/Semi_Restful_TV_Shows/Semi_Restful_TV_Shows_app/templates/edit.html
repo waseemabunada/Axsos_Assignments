@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit {{ film.title }}</title>
+</head>
+<body>
+    <h1>Edit {{ film.title }}</h1>
+    <form action="/shows/{{ film.id }}/update" method="POST">
+        {% csrf_token %}
+        <label>Title:</label><br>
+        <input type="text" name="title" value="{{ film.title }}"><br>
+
+        <label>Network:</label><br>
+        <input type="text" name="network" value="{{ film.network }}"><br>
+
+        <label>Release Date:</label><br>
+        <input type="date" name="releasedate" value="{{ film.release_date }}"><br>
+
+        <label>Description:</label><br>
+        <textarea name="description">{{ film.description }}</textarea><br><br>
+
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

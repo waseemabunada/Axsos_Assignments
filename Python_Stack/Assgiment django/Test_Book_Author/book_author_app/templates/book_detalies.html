@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>views</title>
+</head>
+
+<body>
+    <h1>{{ display_book.title }}</h1>
+    <h5>ID: {{ display_book.id }}</h5>
+    <p><strong>Description:</strong> {{ display_book.description }}</p>
+    <h4>Authors:</h4>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <select name="author_name">
+            {% for author in authors %}
+            <option value="{{author.id}}">{{author.first_name}} {{author.last_name}}</option>
+            {% endfor %}
+        </select>
+        <button>Add</button>
+    </form>
+</body>
+
+</html>
