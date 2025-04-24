@@ -1,27 +1,5 @@
 from django.db import models
 
-# Create your models here.
-class Book(models.Model):
-    title=models.CharField(max_length=30)
-    description=models.TextField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    author = models.ManyToManyField('author', related_name='books')
-    
-def add_book(post):
-    book_title=post['title']
-    book_description=post['description']
-    Book.objects.create(title=book_title,description=book_description)   #title from class = name key post request
-
-def get_all_books():
-    return Book.objects.all()
-
-def desplay_book_by_id(bookid):
-    return Book.objects.get(id=bookid)
-
-
-
-
 class Author(models.Model):
     first_name=models.CharField(max_length=30)
     last_name=models.CharField(max_length=30)
@@ -41,3 +19,38 @@ def get_all_author():
 
 def desplay_author_by_id(authorid):
     return Author.objects.get(id=authorid)
+
+
+def connection_author_book(post,bookid):
+    author = Author.objects.get(id = post['author_name'])
+    book = Book.objects.get(id= bookid)
+    book.author.add(author)
+
+def connection_book_author(post,authorid):
+    book =Book.objects.get(id =post['book_name'])
+    authors= Author.objects.get (id=authorid)
+    book.author.add(authors)
+
+
+# Create your models here.
+class Book(models.Model):
+    title=models.CharField(max_length=30)
+    description=models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    author = models.ManyToManyField(Author, related_name='books')
+    
+def add_book(post):
+    book_title=post['title']
+    book_description=post['description']
+    Book.objects.create(title=book_title,description=book_description)   #title from class = name key post request
+
+def get_all_books():
+    return Book.objects.all()
+
+def desplay_book_by_id(bookid):
+    return Book.objects.get(id=bookid)
+
+
+
+

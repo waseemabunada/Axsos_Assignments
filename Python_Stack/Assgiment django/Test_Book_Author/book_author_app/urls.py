@@ -8,5 +8,6 @@ urlpatterns = [
     path('author', views.authorpage),
     path('add_author', views.add_author),
     path('author_detalies/<int:authorid>',views.author_detalies),
-    path('relation_author_to_book/<int:authorid>',views.relation_author_to_book)
+    path('connection_with_author/<int:bookid>',views.connection_with_author),
+    path('connection_with_book/<int:authorid>',views.connection_with_book)
 ]

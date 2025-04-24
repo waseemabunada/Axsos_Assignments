@@ -12,8 +12,12 @@
     <h5>ID: {{ display_book.id }}</h5>
     <p><strong>Description:</strong> {{ display_book.description }}</p>
     <h4>Authors:</h4>
-
-    <form action="" method="POST">
+    <ul> 
+        {%for author in display_book.author.all %}
+        <li>{{author.first_name}}</li>
+        {% endfor %}
+    </ul>
+    <form action="/connection_with_author/{{display_book.id}}" method="POST">
         {% csrf_token %}
         <select name="author_name">
             {% for author in authors %}

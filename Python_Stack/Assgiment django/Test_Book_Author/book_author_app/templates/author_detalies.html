@@ -10,13 +10,18 @@
         <h5>ID: {{ display_author.id }}</h5>
         <p><strong>notes:</strong> {{ display_author.notes}}</p>
         <h4>Authors:</h4>
+        <ul> 
+            {%for book in display_author.books.all %}
+            <li>{{book.title}}</li>
+            {% endfor %}
+        </ul>
 
         
-    <form action="relation_author_to_book/{{display_author.id}}" method="POST">
+    <form action="/connection_with_book/{{display_author.id}}" method="POST">
         {% csrf_token %}
         <select name="book_name">
             <option value="" disabled selected>select an book</option>
-            {% for book in books %}
+            {% for book in display_author.books.all %}
             <option value="{{book.id}}">{{book.title}} </option>
             {% endfor %}
         </select>

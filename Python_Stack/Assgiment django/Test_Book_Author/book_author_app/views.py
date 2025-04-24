@@ -39,6 +39,13 @@ def author_detalies(request ,authorid):
         'books': models.get_all_books()
     }
     return render (request,'author_detalies.html',context)
-def relation_author_to_book(request,bookid)
+
+def connection_with_author(request,bookid):
     if request.method == "POST":
-        models.Author.
+        models.connection_author_book(request.POST,bookid)
+    return redirect(f'/book_detalies/{bookid}')
+
+def connection_with_book (request,authorid):
+    if request.method == "POST":
+        models.connection_book_author(request.POST,authorid)
+    return redirect(f'/author_detalies/{authorid}')
