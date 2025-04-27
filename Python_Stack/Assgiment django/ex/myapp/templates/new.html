@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV shows</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <div class="row mt-5">
+            <h1 class="col-8">Recommend a New Show</h1>
+            <a class="col-2" href="/shows">TV shows</a>
+            <a class="col-2" href="/logout">Logout</a>
+        </div>
+        {% if messages %}
+
+        <ul class="messages">
+            {% for message in messages %}
+            <li {% if message.tags %} class="{{ message.tags }} text-danger" {% endif %}>{{ message }}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <form action="/add" method="post" class="needs-validation" novalidate>
+            {% csrf_token %}
+            <div class="col-8">
+                <!-- Title -->
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" name="title" id="title" placeholder="Show title" required>
+                    <div class="invalid-feedback">
+                        Please provide a title.
+                    </div>
+                    <!-- For validation errors -->
+                    {% if errors.title %}
+                    <small class="text-danger">{{ errors.title }}</small>
+                    {% endif %}
+                </div>
+
+                <div class="form-row">
+                    <!-- Netwrok -->
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="network">Network</label>
+                            <input type="text" class="form-control" name="network" id="network"
+                                placeholder="Show network" required>
+                            <div class="invalid-feedback">
+                                Please provide a network.
+                            </div>
+                            <!-- For validation errors -->
+                            {% if errors.network %}
+                            <small class="text-danger">{{ errors.network }}</small>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <!-- Release Date -->
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="release_date">Release Date</label>
+                            <input type="date" class="form-control" name="release_date" id="release_date" required>
+                            <div class="invalid-feedback">
+                                Please provide a release date in YYYY-MM-DD format.
+                            </div>
+                            <!-- For validation errors -->
+                            {% if errors.release_date %}
+                            <small class="text-danger">{{ errors.release_date }}</small>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" id="description" name="description" rows="5"
+                        required>{{ des }}</textarea>
+                    <div class="invalid-feedback">
+                        Please provide a Description.
+                    </div>
+                    <!-- For validation errors -->
+                    {% if errors.description %}
+                    <small class="text-danger">{{ errors.description }}</small>
+                    {% endif %}
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-info">Create</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>

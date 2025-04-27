@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Shows</title>
+    {% load static %}
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container  mt-4">
+        <h1 class="col-8">Welcome to your NEXTFIX, {{ user.first_name }}!</h1>
+        <div class="row mt-5">
+            <div class="col-8"></div>
+            <a class="col-2" href="/shows/new">+ Create</a>
+            <a class="col-2" href="/logout">Logout</a>
+        </div>
+        <h1 class="mb-5">All TV Shows</h1>
+        <table class="table table-hover col-10 mb-4">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Title</th>
+                    <th>Network</th>
+                    <th>Release Date</th>
+                    <th>More</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for show in shows %}
+                <tr>
+                    <td><a href="shows/{{ show.id }}">{{ show.title }}</a></td>
+                    <td>{{ show.network }}</td>
+                    <td>{{ show.release_date }}</td>
+                    {% if show in user.shows_recommendation.all %}
+                    <td><a href="shows/{{ show.id }}/destroy">Delete</a> | <a href="shows/{{ show.id }}/edit">Edit</a>
+                    </td>
+                    {% else %}
+                    <td><a href="shows/{{ show.id }}">Details</a></td>
+                    {% endif %}
+                    <form action="/add_to_favorites" method="post">
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
