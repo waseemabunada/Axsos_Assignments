@@ -12,5 +12,7 @@
 <h1>Date1</h1>
 
  <p><fmt:formatDate value="${now}" pattern="EEEE, MMMM d, yyyy" /></p>
+ 
+ <script src="/js/alert.js"></script>
 </body>
 </html>

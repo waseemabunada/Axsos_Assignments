@@ -11,5 +11,6 @@
 <body>
 <h1>time</h1>
 <p><fmt:formatDate value="${now}" pattern="hh:mm:ss a" /></p> 
+ <script src="/js/alert.js"></script>
 </body>
 </html>
