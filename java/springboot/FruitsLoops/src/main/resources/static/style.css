@@ -1,0 +1,22 @@
+@charset "UTF-8";
+ 
+ 
+body {
+	text-align: center;
+}
+
+h1 {
+	color: rgb(255, 182, 194);
+}
+
+table {
+	margin: auto; 
+	width: 80%;
+	 border: 8px solid rgb(255, 182, 194);
+}
+
+td,th {
+	border-top: 1px solid rgb(255, 182, 194);
+	padding: 8px;
+	text-align: left;
+}
