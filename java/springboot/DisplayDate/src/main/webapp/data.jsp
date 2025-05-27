@@ -7,6 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Date</title>
+<link rel="stylesheet" type="text/css" href="/style.css">
+
 </head>
 <body>
 <h1>Date1</h1>

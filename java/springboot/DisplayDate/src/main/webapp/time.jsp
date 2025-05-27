@@ -7,6 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Time</title>
+<link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
 <h1>time</h1>
