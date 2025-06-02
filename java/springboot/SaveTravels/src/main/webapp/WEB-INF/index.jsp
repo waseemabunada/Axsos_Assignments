@@ -32,7 +32,7 @@
                     <td>${travels.id}</td>
                     <td><a href="/expenses/${travels.id}" class="text-decoration-none">${travels.expenseName}</a></td>
                     <td>${travels.vendor}</td>
-                    <td>${travels.amount}</td>
+                    <td>${travels.amount}$</td>
                     <td><a href="/expenses/edit/${travels.id}">edit</a></td>
                     <td>
                     <form action="/travels/${travels.id}" method="post">
@@ -64,8 +64,8 @@
         </div>
 
         <div class="mb-3">
-            <form:label path="amount" cssClass="form-label">amount</form:label>
-            <form:input path="amount" type="number" min="1" max="10000" cssClass="form-control" />
+            <form:label path="amount" cssClass="form-label" >amount</form:label>
+            <form:input path="amount" type="number" min="1" max="10000" cssClass="form-control" step="0.01" />
             <form:errors path="amount" cssClass="text-danger" />
         </div>
 

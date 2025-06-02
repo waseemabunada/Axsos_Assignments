@@ -47,11 +47,12 @@ public class Travelscontrollers {
 	} 
 	
 	@GetMapping("/expenses/edit/{id}")
-    public String desplay(@PathVariable Long id,@ModelAttribute("travels") Travels travels,Model model) {
-		Travels travels1 =travelsService.findTravels(id);
- 		model.addAttribute("travels", travels1);
-		return "edit";
+	public String desplay(@PathVariable Long id, Model model) {
+	    Travels travels1 = travelsService.findTravels(id);
+	    model.addAttribute("travels", travels1);
+	    return "edit";
 	}
+
 	
 	
 	@PutMapping("/expenses/edit/{id}")
@@ -72,11 +73,12 @@ public class Travelscontrollers {
 	
 	
 	@GetMapping("/expenses/{id}")
-	 public String displayExpense(@Valid @PathVariable("id") Long id,BindingResult result,Model model) {
-		 model.addAttribute("travels",travelsService.findTravels(id));
-		 System.out.println(model.getAttribute("travels"));
-		 return "display";
-	 }
+	public String displayExpense(@PathVariable("id") Long id, Model model) {
+	    model.addAttribute("travels", travelsService.findTravels(id));
+	    System.out.println(model.getAttribute("travels"));
+	    return "display";
+	}
+
 	
 	@RequestMapping(value="/travels/{id}", method=RequestMethod.DELETE)
 	public String destroy(@PathVariable("id") Long id) {

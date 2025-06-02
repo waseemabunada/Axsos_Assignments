@@ -33,7 +33,7 @@ public class Travels {
     @NotNull
     @DecimalMin(value = "0.0", inclusive = false)
     @DecimalMax(value = "10000.0", inclusive = true)
-    private Integer amount;
+    private Double amount;
     
     @NotNull
     @Size(min = 5, max = 200)
@@ -48,7 +48,7 @@ public class Travels {
     public Travels() {
     }
 //create and update لما بدي اعمل 
-    public Travels(String expenseName, String vendor, Integer amount, String description) {
+    public Travels(String expenseName, String vendor, Double amount, String description) {
         this.expenseName = expenseName;
         this.vendor = vendor;
         this.amount = amount;
@@ -75,10 +75,10 @@ public class Travels {
 	public void setVendor(String vendor) {
 		this.vendor = vendor;
 	}
-	public Integer getAmount() {
+	public Double getAmount() {
 		return amount;
 	}
-	public void setAmount(Integer amount) {
+	public void setAmount(Double amount) {
 		this.amount = amount;
 	}
 	public String getDescription() {
