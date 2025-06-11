@@ -1,6 +1,7 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +12,9 @@
 <body>
 <div class="container mt-5">
 
-    <a href="/" class="btn btn-outline-primary mb-3">Home</a>
+    <a href="/home" class="btn btn-outline-primary mb-3">Home</a>
+    <a href="/logout" class="btn btn-outline-primary mb-3">Sign Out</a>
+
 
     <h1>${category.name}</h1>
 
