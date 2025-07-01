@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Arrow Functions</title>
+</head>
+<body id="body">
+
+    <h1>My Boring Website</h1>
+
+    <p id="paragraph">
+        This website is boring, with very little CSS.
+        However, we really just care about the JavaScript.
+        For example, if you click 
+        <button id="button">this button</button>,
+        the background of this paragraph tag will change to blue.
+    </p>
+
+    <p>
+        We also have an 
+        <button id="alert">alert</button>
+        button that will grab the text from the input below and show it in a popup.
+    </p>
+
+    <div>
+        <input type="text" id="popup-input" />
+    </div>
+
+    <p>
+        We just like random interactivity in the site, including a fun effect if you hover over 
+        <span id="hover-this"><b>this.</b></span>
+    </p>
+
+    <p id="custom-color-paragraph">
+        Another task: This should be another feature.
+        I want to click anywhere in this paragraph tag and I want to be able to change the background color to whatever is in this input: 
+        <input type="text" id="color-input" />
+    </p>
+
+    <script>
+        const getValueFromId = id => document.getElementById(id).value;
+
+        const setBackgroundColorById = (id, color) => {
+            document.getElementById(id).style.backgroundColor = color;
+        };
+
+        const mouseOverFunction = el => {
+            el.style.backgroundColor = "black";
+        };
+
+        const changeBackgroundToInputColor = el => {
+            const color = getValueFromId("color-input");
+            el.style.backgroundColor = color;
+        };
+
+        document.getElementById("button").addEventListener("click", () => {
+            setBackgroundColorById("paragraph", "blue");
+        });
+
+        document.getElementById("alert").addEventListener("click", () => {
+            alert(getValueFromId("popup-input"));
+        });
+
+        document.getElementById("hover-this").addEventListener("mouseover", () => {
+            setBackgroundColorById("body", "red");
+        });
+
+        document.getElementById("hover-this").addEventListener("mouseout", () => {
+            setBackgroundColorById("body", "white");
+        });
+
+        document.getElementById("paragraph").addEventListener("click", () => {
+            setBackgroundColorById("paragraph", "lightblue");
+        });
+
+        document.getElementById("custom-color-paragraph").addEventListener("click", (e) => {
+            changeBackgroundToInputColor(e.currentTarget);
+        });
+
+    </script>
+
+</body>
+</html>
