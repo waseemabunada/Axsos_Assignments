@@ -16,7 +16,7 @@ const WordColor = () => {
 
 return (
     <p style={styling}>
-        The word is: {word}!
+        The word is : {word}!
     </p>
 );
 
